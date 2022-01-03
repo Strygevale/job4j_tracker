@@ -47,4 +47,14 @@ public class PointTest {
 
     }
 
+   @Test
+    public void when23To46AndThen3dot6() {
+       Point a = new Point(1, 2, 3);
+       Point b = new Point(2, 3, 6);
+       double rsl = a.distance3d(b);
+       double expected = 3.31;
+       Assert.assertEquals(expected, rsl, 0.01);
+
+    }
+
 }
