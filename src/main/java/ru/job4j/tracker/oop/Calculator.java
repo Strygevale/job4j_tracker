@@ -20,17 +20,18 @@ public class Calculator {
         return k * x;
     }
 
-    public int sumAllOperation(int y, int z, int a, int k) {
-        return sum(y) + multiply(z) + minus(a) + divide(k);
+    public int sumAllOperation(int a) {
+        int res;
+        res = sum(a) + multiply(a) + minus(a) + divide(a);
+        return res;
     }
 
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
-        int sum = sum(4);
-        int multiply = calculator.multiply(5);
-        int minus = minus(5);
-        int divide = calculator.divide(5);
-        int rsl = calculator.sumAllOperation(sum, multiply, minus, divide);
-        System.out.println(rsl);
+        System.out.println(sum(4));
+        System.out.println(minus(7));
+        System.out.println(calculator.divide(5));
+        System.out.println(calculator.multiply(5));
+        System.out.println(calculator.sumAllOperation(1));
     }
 }
