@@ -48,7 +48,7 @@ public class PointTest {
     }
 
    @Test
-    public void when23To46AndThen3dot6() {
+    public void when123To236AndThen3dot31() {
        Point a = new Point(1, 2, 3);
        Point b = new Point(2, 3, 6);
        double rsl = a.distance3d(b);
