@@ -19,8 +19,7 @@ public class Computer {
 
     public Computer(int ssd, String cpu) {
         this.ssd = ssd;
-        this.cpu = cpu;
-    }
+        this.cpu = cpu;    }
 
     public void printInfo() {
         System.out.println("Много мониторов: " + multiMonitor);
