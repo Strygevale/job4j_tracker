@@ -4,12 +4,9 @@ public class Surgeon extends Doctor {
 
     private int quantitySurgeon;
 
-    public Surgeon(int quantitySurgeon) {
-        this.quantitySurgeon = quantitySurgeon;
-    }
-
-    public Surgeon(String name, String surname, String education, String birthday) {
+    public Surgeon(String name, String surname, String education, String birthday, int quantitySurgeon) {
         super(name, surname, education, birthday);
+        this.quantitySurgeon = quantitySurgeon;
     }
 
     public void showInfo() {

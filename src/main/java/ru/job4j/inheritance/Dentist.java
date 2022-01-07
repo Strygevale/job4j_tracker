@@ -4,12 +4,9 @@ public class Dentist extends Doctor {
 
     private int quantityDentist;
 
-    public Dentist(int quantityDentist) {
-        this.quantityDentist = quantityDentist;
-    }
-
-    public Dentist(String name, String surname, String education, String birthday) {
+    public Dentist(String name, String surname, String education, String birthday, int quantityDentist) {
         super(name, surname, education, birthday);
+        this.quantityDentist = quantityDentist;
     }
 
     public void showInfo() {
