@@ -3,7 +3,7 @@ package ru.job4j.poly;
 public interface Transport {
     void drive();
 
-    int people();
+    void people();
 
-    int refill(int price);
+    int refill(int liter);
 }
