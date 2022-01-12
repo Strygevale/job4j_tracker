@@ -9,16 +9,17 @@ public class Matches {
         boolean turn = true;
         int count = 11;
         while (count > 0) {
-            String player = turn ? "Первый игрок" : "Второй игрок";
-            System.out.println(player + " введите число от 1 до 3:");
+            String player = turn ? "Первый игрок " : "Второй игрок ";
+            System.out.println(player + "введите число от 1 до 3: ");
             int matches = Integer.parseInt(input.nextLine());
-            turn = !turn;
-            if (matches > 0 && matches < 4) {
-                turn = !turn;
-                System.out.println(player + "ввел " + matches);
+            if (matches > 0 && matches < 4 && ((count - matches) >= 0)) {
+                System.out.println(player + " ввел " + matches);
                 count = count - matches;
-                System.out.println("Осталось: " + Math.max(0, count));
-                turn = false;
+                Math.min(count, matches);
+                System.out.println("Осталось: " + count);
+                turn = !turn;
+            } else {
+                System.out.println("Неверное значение");
             }
         }
         if (!turn) {
