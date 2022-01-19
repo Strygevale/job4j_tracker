@@ -6,7 +6,10 @@ import java.util.Scanner;
 
 public class StartUI {
 
+    private final Output out;
+
     public StartUI(Output out) {
+        this.out = out;
     }
 
     public void init(Input input, Tracker tracker, UserAction[] actions) {
@@ -20,14 +23,9 @@ public class StartUI {
     }
 
     private void showMenu(UserAction[] actions) {
-        String[] menu = {
-                "Add new Item", "Show all items", "Edit item",
-                "Delete item", "Find item by id", "Find items by name",
-                "Exit Program"
-        };
-        System.out.println("Menu:");
+        out.println("Menu:");
         for (int index = 0; index < actions.length; index++) {
-            System.out.println(index + ". " + actions[index].name());
+            out.println(index + ". " + actions[index].name());
         }
     }
 
@@ -42,7 +40,7 @@ public class StartUI {
                 new DeleteItem(output),
                 new FindItemById(output),
                 new FindItemByName(output),
-                new ExitProgram(output)
+                new ExitProgram()
         };
         new StartUI(output).init(input, tracker, actions);
     }
