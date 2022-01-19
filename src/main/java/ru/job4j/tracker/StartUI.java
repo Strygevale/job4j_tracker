@@ -6,6 +6,9 @@ import java.util.Scanner;
 
 public class StartUI {
 
+    public StartUI(Output out) {
+    }
+
     public void init(Input input, Tracker tracker, UserAction[] actions) {
         boolean run = true;
         while (run) {
@@ -41,6 +44,6 @@ public class StartUI {
                 new FindItemByName(output),
                 new ExitProgram(output)
         };
-        new StartUI().init(input, tracker, actions);
+        new StartUI(output).init(input, tracker, actions);
     }
 }
