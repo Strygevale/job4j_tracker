@@ -113,7 +113,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Item item = new Item("test");
         tracker.add(item);
-        String[] answers = {"0", "test", "1"};
+        String[] answers = {"0", item.getName(), "1"};
         Input input = new StubInput(answers);
         Output out = new StubOutput();
         UserAction[] action = {
@@ -138,7 +138,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Item item = new Item("test");
         tracker.add(item);
-        String[] answers = {"0", "1", "1"};
+        String[] answers = {"0", String.valueOf(item.getId()), "1"};
         Input input = new StubInput(answers);
         Output out = new StubOutput();
         UserAction[] actions = {
