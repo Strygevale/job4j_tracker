@@ -7,12 +7,12 @@ public class UserStore {
                return user;
            }
        }
-        throw new UserInvalidException();
+        throw new UserInvalidException("User not found");
     }
 
     public static boolean validate(User user) throws UserInvalidException {
         if (!user.isValid() || user.getUsername().length() < 3) {
-            throw new UserInvalidException();
+            throw new UserInvalidException("User is not valid");
         }
         return true;
     }
@@ -26,10 +26,10 @@ public class UserStore {
             if (validate(user)) {
                 System.out.println("This user has an access");
             }
-        } catch (UserInvalidException eu) {
-            eu.printStackTrace();
-        } catch (UserNotFoundException ea) {
-            ea.printStackTrace();
+        } catch (UserInvalidException ie) {
+            ie.printStackTrace();
+        } catch (UserNotFoundException nfe) {
+            nfe.printStackTrace();
         }
     }
 }
