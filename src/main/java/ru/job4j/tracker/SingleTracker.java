@@ -3,7 +3,6 @@ package ru.job4j.tracker;
 import java.util.Arrays;
 
 public final class SingleTracker {
-
     private Tracker tracker = new Tracker();
 
     public SingleTracker(Tracker tracker) {
