@@ -38,4 +38,15 @@ public class ValidateInputTest {
         int selected = input.askInt("Enter menu:");
         assertThat(selected, is(-1));
     }
+
+    @Test
+    public void whenValidDigitInput() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"1", "2", "3"}
+        );
+        ValidateInput input = new ValidateInput(out, in);
+        int selected = input.askInt("Enter menu:");
+        assertThat(selected, is(1));
+    }
 }
