@@ -4,11 +4,11 @@ public class FindEl {
 
     public static int indexOf(String[] value, String el) throws ElementNotFoundException {
         for (int i = 0; i < value.length; i++) {
-            if (value[i] == el) {
+            if (el.equals(value[i])) {
                 return i;
             }
         }
-        return -1;
+        throw new ElementNotFoundException("Element not found");
     }
 
     public static void main(String[] args) {
