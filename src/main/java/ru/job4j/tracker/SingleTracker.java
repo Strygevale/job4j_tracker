@@ -3,10 +3,16 @@ package ru.job4j.tracker;
 import java.util.Arrays;
 
 public final class SingleTracker {
-    private Tracker tracker = new Tracker();
+    private static Tracker tracker = null;
 
-    public SingleTracker(Tracker tracker) {
-        this.tracker = tracker;
+    private SingleTracker() {
+    }
+
+    public static Tracker getTracker() {
+        if (tracker == null) {
+            tracker = new Tracker();
+        }
+        return tracker;
     }
 
     public Item add(Item item) {
